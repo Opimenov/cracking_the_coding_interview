@@ -1,0 +1,26 @@
+public class  OneAway {
+    /*
+      insert char krot -> krote
+      remove char krot -> kro
+      replace char krot -> drot
+
+      figure out if two string are one/zero operations away
+    */
+    static boolean test(String s1, String s2) {
+	if (s1 == null || s2 == null ||
+	    ( s1.length() - s2.length > 1)
+	  || ( s1.length() - s2.length < -1) ) return false;
+	else if (s1 == s2) return true;
+
+	boolean oneOp = true;
+	boolean secondOp = false;
+	
+	while
+	
+	return !secondOp;
+    }
+       
+      
+    public static void main(String a[]) {
+    }
+}

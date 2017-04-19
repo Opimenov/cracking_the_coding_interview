@@ -1,0 +1,8 @@
+public class StringRotation() {
+    public static void main(String[] ar) {
+	String s1 = "hello";
+	for (char c : s1.toCharArray()) {
+	    System.out.print(c);
+	}
+    }
+}

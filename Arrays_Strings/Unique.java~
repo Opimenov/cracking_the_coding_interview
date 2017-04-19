@@ -1,0 +1,30 @@
+import java.util.HashMap;
+import java.lang.*;
+public class  Unique {
+    //determines if all chars are unique
+    static boolean unique(String s1) {
+	boolean result = true;
+	if (s1 == null) return false;
+	boolean[] alphabet = new boolean[94];
+	
+	for (char c : s1.toCharArray() ) {
+	    if (alphabet[((int) c) - 32]) {
+		result = false;
+		break;
+	    }
+	    else alphabet[((int) c) - 32] = true;
+	}
+	alphabet = null;
+	System.gc();
+	return result;
+    }
+      
+    public static void main(String a[]) {
+	System.out.print("Sasha :: ");
+	System.out.println(	Unique.unique("Sasha"));
+	System.out.print("Pimenov :: ");
+	System.out.println(	Unique.unique("Pimenov"));
+	System.out.println(	Unique.unique(""));
+	System.out.println(	Unique.unique("Sah S"));
+    }
+}

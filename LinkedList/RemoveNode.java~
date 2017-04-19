@@ -1,0 +1,14 @@
+public class RemoveNode {
+    public static void remove_node(LinkedList ll, Node n) {
+	if (ll.size < 3 || ll == null || n == null) 
+	                                           return;
+	Node cur = ll.head;
+	while (cur.next != null) {
+	    if (cur.next == n) {
+		cur.next = n.next;
+		return;
+	    }
+	    cur = cur.next;
+	}
+    }
+}

@@ -1,0 +1,41 @@
+public class RotateMatrix{
+    public static void rotate(int[][] m) {
+	/*
+	  let's think about how we are going to do it
+	  1. we'll rotate matrix layer by layer counter clock wise
+	   for instance
+
+	   1  2  3  4
+	   5  6  7  8
+	   9  10 11 12
+	   13 14 15 16
+                |
+	        V
+	   4 8 12 16
+	   3 7 11 15
+	   2 6 10 14
+	   1 5  9 13
+	 */
+	int size p = m.length;
+	int steps = size - 1;
+	//if size is odd the center tile doesn't move
+	int layer_number = size / 2; 
+	for(int i = 0; i<layer_number; i++) {
+	    rotate_ccw(m, i, steps--);
+	}
+
+    }
+    //helper function to rotate counter_clock_wise 
+    private void rotate_ccw(int[][] matrix, int starting_index, int step_number) {
+	int current_i = 0, current_j = 0;
+	while(step_number != 0) {
+	    move(matrix, )
+	}
+
+    }
+    //helper function to  get a direction of movement
+    private int get_direction(int[][] matrix, int start_index, int x, int y,) {
+
+    }
+
+}

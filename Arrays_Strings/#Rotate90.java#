@@ -1,0 +1,12 @@
+public class Rotate90 {
+    //assuming that the matrix is square NxN 
+    public static boolean rotate90(int[][] matrix) {
+	if (matrix == null) return false;
+	
+    }
+    //each 
+    private static void moveCounterClockWise(int[][] matrix, int x, int y) {
+
+    }
+    private static boolean canMoveLeft(int[][] matrix, int x)
+}
