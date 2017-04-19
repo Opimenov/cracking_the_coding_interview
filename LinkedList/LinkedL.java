@@ -28,6 +28,10 @@ public class LinkedL {
 	this.size++;
     }
 
+    public void remove_node(Node d) {
+	d.prev.next = d.next;
+    }
+
     public void show_list() {
 	Node cur = this.head;
 	while(cur != null) {
