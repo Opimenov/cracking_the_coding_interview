@@ -1,0 +1,39 @@
+public class Sum2Lists {
+    public static void sum2lists(LinkedL l1, l2) {
+	/**
+	 in this example two lists store numbers in reverse order:
+	 3 -> 2 -> 5      ==> 523
+	 9 -> 4 -> 6 -> 4 ==> 4649
+	 since two lists have different length I think it's a good idea
+	 to pad short list with zeros
+	 */
+	
+	
+    }
+    /**
+       appends n zeros to the ll
+     */
+    public static void padWithZeros(LinkedL ll, int n) {
+	while (n-- > 0) {
+	    ll.add_to_tail(new Node(0));
+	}
+    }
+    public static void main(String[] ar) {
+	Node h = new Node(3);
+	Node t = new Node(2);	
+	LinkedL ll = new LinkedL(h,t);
+	ll.add_to_tail(new Node (5));
+	ll.show_list();
+
+	Node h = new Node(9);
+	Node t = new Node(4);	
+	LinkedL l2 = new LinkedL(h,t);
+	l2.add_to_tail(new Node (6));
+	l2.add_to_tail(new Node (4));
+	l2.show_list();
+
+	Sum2lists.padWithZeros(ll,l2.size - ll.size);
+	ll.show_list();	
+    }
+    
+}

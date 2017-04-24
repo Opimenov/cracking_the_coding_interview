@@ -1,0 +1,37 @@
+import java.util.Stack;
+public static class isPolindrome {
+    public static boolean check_if_polindrome(LinkedL ll) {
+	//check the argument 
+	if (ll == null) return false;
+	if (ll.size == 1) return true;
+
+	Stack<Node> stack = new Stack<>();
+	int counter = 0;
+	int middle = ll.size / 2;
+	Node current = ll.head;
+
+	while(counter < ll.size) {
+	    while(counter <= middle) {
+		if (counter == middle) {
+		    if ((ll.size % 2) != 0) {
+			//skip the middle node
+			current = current.next.next;
+		    }
+		    else {
+			current = current.next;
+		    }
+		}
+		else {
+		    stack.push(current);
+		    current = current.next;
+		}
+		counter++;
+	    }
+	    if (current != stack.pop()) return false;
+	    current = current.next;
+	    counter++;
+	}
+	return true;
+    }
+    
+}

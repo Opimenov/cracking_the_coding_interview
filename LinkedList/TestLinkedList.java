@@ -7,6 +7,8 @@ public class TestLinkedList {
 	ll.add_to_head(new Node(10));
 	ll.show_list();
 	ll.add_to_tail(new Node (3));
+	ll.show_list();
+	ll.remove_node(h);
 	ll.show_list();	
     }
 }
