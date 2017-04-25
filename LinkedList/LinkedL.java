@@ -17,7 +17,11 @@ public class LinkedL {
 	new_tail.prev = old_tail;
 	old_tail.next = new_tail;
 	this.tail = new_tail;
-	this.size++;
+	while (new_tail.next != null) {
+	    new_tail = new_tail.next;
+	    this.size++;
+	}
+	    
     }
 
     public void add_to_head(Node new_head) {
